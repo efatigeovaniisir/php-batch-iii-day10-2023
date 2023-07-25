@@ -19,15 +19,15 @@
 </div>
 
 <div class="container">
-    <div class="row">
+    <div class="card row bg-success">
         <div class="col-12">
-            <a href="tambah.php" class="btn btn-success"> <i class="bi bi-plus-circle"></i> Tambah Makanan </a>
+            <a href="tambah.php" class="btn btn-warning text-success mt-2"> <i class="bi bi-plus-circle"></i> Tambah Makanan </a>
 
 
             <div class="table-responsive mt-3">
 
-                <table class="table table-bordered table-hover">
-                    <tr class="text-center">
+                <table class="table table-bordered table-hover ">
+                    <tr class="text-center ">
                         <th>No</th>
                         <th>Nama Makanan</th>
                         <th>Harga</th>

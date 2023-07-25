@@ -31,37 +31,44 @@
 ?>
 <div class="row text-center">
     <div class="col-12 p-5">
-        <p class="h4"> Data Makanan Papua <i class="bi bi-egg-fried"></i> </p>
+        <p class="h2 fw-bold"> Data Makanan Papua <i class="bi bi-egg-fried"></i> </p>
     </div>
 </div>
 
 <div class="container">
-    <div class="row">
+<a href="index.php" class="btn btn-success">kembali</a>
+    <div class=" card row">
         <div class="col-12">
-            <h1>Tambah Data Makanan</h1>
+            <h4 class="text-center fw-bold text-success">Tambah Data Makanan</h4>
             <form action="" method="post">
-                <div class="p-3">
-                <label for="nama">Nama Makanan</label>
-                <Input id="nama" type="text" name="nama_makanan" placeholder="Masukan Nama Makanan" required>
+                <div class="mt-2">
+                    <label for="nama" class="form-label">Nama Makanan</label>
+                    <Input class="form-control" id="nama" type="text" name="nama_makanan"
+                        placeholder="Masukan Nama Makanan" required>
                 </div>
-                <br><br>
-                <label for="number_format">Harga</label>
-                <Input id="harga" type="number" name="harga" placeholder="Masukan Harga" required>
 
-                <br><br>
-                <label for="warung">Warung</label>
-                <Input id="warung" type="text" name="warung" placeholder="Masukan Warung" required>
+                <div class="mt-2">
+                    <label for="number_format" class="form-label">Harga</label>
+                    <Input class="form-control" id="harga" type="number" name="harga" placeholder="Masukan Harga"
+                        required>
+                </div>
 
-                <br><br>
-                <label for="alamat">Alamat Warung</label>
-                <Input id="alamat" type="text" name="alamat" placeholder="Masukan Alamat" required>
-                <br><br>
-                <label for="pemilik">Pemilik Warung</label>
-                <Input id="pemilik" type="text" name="pemilik_warung" placeholder="Masukan Pemilik Warung" required>
+                <div class="mt-2">
+                    <label for="warung" class="form-label ">Warung</label>
+                    <Input class="form-control" id="warung" type="text" name="warung" placeholder="Masukan Warung" required>
+                </div>
+                <div class="mt-2">
+                    <label for="alamat" class="form-label">Alamat Warung</label>
+                    <Input class="form-control" id="alamat" type="text" name="alamat" placeholder="Masukan Alamat" required>
+                </div>
+                <div class="mt-2">
+                    <label for="pemilik" class="form-label">Pemilik Warung</label>
+                    <Input class="form-control" id="pemilik" type="text" name="pemilik_warung" placeholder="Masukan Pemilik Warung" required>
+                </div>
 
-
-                <br><br><br>
-                <button type="submit" name="submit">Simpan</button>
+                <div class="mt-2">
+                    <button type="submit" name="submit" class="btn btn-success m-2">Simpan</button>
+                </div>
             </form>
 
 
