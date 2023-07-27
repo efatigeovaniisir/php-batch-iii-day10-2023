@@ -2,10 +2,9 @@
     require_once('conn.php');
     
     $id_makanan = $_GET["id_makanan"];
-    $query = "SELECT * FROM 'makanan' WHERE id_makanan = $id_makanan";
+    $query = "SELECT * FROM `makanan` WHERE id_makanan = $id_makanan";
     
     $data = mysqli_query($conn, $query); 
-    var_dump($data);
     
 ?>
 

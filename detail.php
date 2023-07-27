@@ -59,8 +59,8 @@ $data = mysqli_query($conn, $query);
                     <tr>
                         <th> Aksi </th>
                         <td>
-                            <a href="ubah.php" class="btn btn-success"> <i class="bi bi-pencil-fill"></i></a>
-                            <a href="hapus.php" class="btn btn-danger"> <i class="bi bi-trash-fill"></i></a>
+                            <a href="ubah.php?id_makanan=<?= $d['id_makanan'];?>" class="btn btn-success"> <i class="bi bi-pencil-fill"></i></a>
+                            <a href="hapus.php?id_makanan=<?= $d['id_makanan'];?>" class="btn btn-danger"> <i class="bi bi-trash-fill"></i></a>
                         </td>
                     </tr>
                     <?php endforeach ?>
