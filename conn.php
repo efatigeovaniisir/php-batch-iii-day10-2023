@@ -29,6 +29,8 @@ function tambah($data) {
 
     $query ="INSERT INTO `makanan` (`id_makanan`, `nama_makanan`, `harga_makanan`, `warung`, `alamat`, `pemilik_warung`) VALUES (NULL,'$nama_makanan','$harga_makanan','$warung','$alamat','$pemilik_warung');";
     $add = mysqli_query($conn, $query);
+    return mysqli_affected_rows($conn);
+
 }
 
 

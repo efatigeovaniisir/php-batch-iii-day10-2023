@@ -49,7 +49,7 @@
 
                 <div class="mt-2">
                     <label for="number_format" class="form-label">Harga</label>
-                    <Input class="form-control" id="harga" type="number" name="harga" placeholder="Masukan Harga"
+                    <Input class="form-control" id="harga" type="number" name="harga_makanan" placeholder="Masukan Harga"
                         required>
                 </div>
 
