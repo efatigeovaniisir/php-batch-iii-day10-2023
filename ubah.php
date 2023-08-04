@@ -2,9 +2,29 @@
     require_once('conn.php');
     
     $id_makanan = $_GET["id_makanan"];
-    $query = "SELECT * FROM `makanan` WHERE id_makanan = $id_makanan";
+    $makanan = query("SELECT * FROM makanan WHERE id_makanan = $id_makanan")[0];
     
-    $data = mysqli_query($conn, $query); 
+
+    // $data = mysqli_query($conn, $query); 
+
+    if(isset($_POST['submit']))
+    {
+        if( ubah($_POST) > 0 ){
+
+        echo"
+        <script>
+        alert('Data Berhasil ditambah');
+        window.location.href = 'index.php';
+        </script>
+        ";
+        } else {
+            echo"
+        <script>
+        alert('Data Gagal ditambah');
+        window.location.href = 'tambah.php';
+        </script>";
+        }
+    }
     
 ?>
 
@@ -26,30 +46,35 @@
             <div class="col-12">
                 <h1 class="text-center">Ubah Data Makanan</h1>
                 <form action="" method="post">
+                <div class="mb-2">
+                        <label for="id-makanan" class="form-label">id makanan</label>
+                        <Input type="hidden" class="form-control" id="number" name="id_makanan" value="<?= $makanan['id_makanan']; ?>"
+                         required>
+                    </div>
                     <div class="mb-2">
                         <label for="nama" class="form-label">Nama Makanan</label>
-                        <Input type="text" class="form-control" id="nama" name="nama" value="PAPEDA"
-                            placeholder="Masukan Nama Makanan" required>
+                        <Input type="text" class="form-control" id="nama" name="nama_makanan" value="<?= $makanan['nama_makanan']; ?>"
+                         required>
                     </div>
                     <div class="mb-2">
                         <label for="nama" class="form-label">Harga</label>
-                        <Input type="number" class="form-control" id="harga" name="harga" value=""
-                            placeholder="Masukan Harga" required>
+                        <Input type="number" class="form-control" id="harga" name="harga_makanan" value="<?= $makanan['harga_makanan']; ?>"
+                        required>
                     </div>
 
                     <div class="mb-2">
                         <label for="nama" class="form-label">Warung</label>
-                        <Input class="form-control" id="warung" type="text" name="warung" placeholder="Masukan Warung" required>
+                        <Input class="form-control" id="warung" type="text" name="warung" value="<?= $makanan['warung']; ?>" required>
                     </div>
 
                     <div class="mb-2">
                         <label for="nama" class="form-label">Alamat Warung</label>
-                        <Input class="form-control" id="alamat" type="text" name="alamat" placeholder="Masukan Alamat" required>
+                        <Input class="form-control" id="alamat" type="text" name="alamat" value="<?= $makanan['alamat']; ?>" required>
                     </div>
 
                     <div class="mb-2">
                         <label for="nama" class="form-label">Pemilik Warung</label>
-                        <Input class="form-control" id="pemilik" type="text" name="pemilik_warung" placeholder="Masukan Pemilik Warung"
+                        <Input class="form-control" id="pemilik" type="text" name="pemilik_warung"value="<?= $makanan['pemilik_warung']; ?>"
                             required>
                     </div>
 

@@ -33,6 +33,21 @@ function tambah($data) {
 
 }
 
+function ubah($data) {
+    $id_makanan = $data["id_makanan"]; 
+    global $conn;
+    $nama_makanan = htmlspecialchars($data['nama_makanan']);
+    $harga_makanan = htmlspecialchars($data['harga_makanan']);
+    $warung = htmlspecialchars($data['warung']);
+    $alamat = htmlspecialchars($data['alamat']);
+    $pemilik_warung = htmlspecialchars($data['pemilik_warung']);
+
+    $query ="UPDATE `makanan` SET (nama_makanan = `$nama_makanan`, harga_makanan = `$harga_makanan`, warung = `$warung`, alamat = `$alamat`, pemiliki_warung = `$pemilik_warung` WHERE id_makanan = `$id_makanan`)";
+    $add = mysqli_query($conn, $query);
+    return mysqli_affected_rows($conn);
+
+}
+
 
 function hapus($id_makanan) {
     global $conn;

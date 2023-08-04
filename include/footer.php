@@ -1,6 +1,6 @@
  <!-- FOOTER START -->
- <footer class="bg-primary text-white text-center fixed-bottom">
-     <p>Develop By <a class="text-decoration-none text-white fw-bold" href="#">Efati Geovani</a></p>
+ <footer class="bg-light text-center text-dark fixed-bottom">
+     <p>Develop By <a class="text-decoration-none text-primary fw-bold" href="#">Efati Geovani</a></p>
  </footer>
  <!-- FOOTER END -->
  
